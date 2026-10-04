@@ -1,0 +1,150 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    padding:0;
+    background-image:url("luck.jpg");
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    overflow:hidden;
+}
+.container{
+    width:500px;
+    height:500px;
+    overflow:hidden;
+    border:5px solid gray;
+    background-color:beige;
+    position:relative;
+    border-radius:50%;
+    margin-top:50px;
+    transition: transform 5s ease-out;
+}
+.container div {
+    width: 200px;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -100px;
+    transform-origin: bottom center;
+    clip-path: polygon(100% 0, 50% 100%, 0 0);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding-top: 70px;
+
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+.container .one {
+    background-color: blue;
+}
+
+.container .two {
+    background-color: rgb(251, 255, 0);
+    transform: rotate(45deg);
+}
+
+.container .three {
+    background-color: rgb(245, 118, 0);
+    transform: rotate(90deg);
+}
+
+.container .four {
+    background-color: rgb(245, 0, 184);
+    transform: rotate(135deg);
+}
+
+.container .five {
+    background-color: rgb(105, 248, 236);
+    transform: rotate(180deg);
+}
+
+.container .six {
+    background-color: rgb(60, 255, 0);
+    transform: rotate(225deg);
+}
+
+.container .seven {
+    background-color: rgb(255, 0, 0);
+    transform: rotate(270deg);
+}
+
+.container .eight {
+    background-color: rgb(80, 73, 73);
+    transform: rotate(315deg);
+}
+.arrow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2000;
+    color:white;
+}
+
+.arrow::before{
+    content: '\1f817';
+    font-size:60px;
+}
+
+#spin{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index:1000;
+    background-color:white;
+    border:2px solid gray;
+    text-align:center;
+    margin-top:10px;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    font-weight:bold;
+    font-size:20px;
+    cursor:pointer;
+    outline:none;
+}
+@media(max-width:500px){
+    .container{
+        width:300px;
+        height:300px;
+    }
+    #spin {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        margin-top:20px;
+    }
+    .container div {
+    width: 120px;
+    height: 50%;
+    margin-left: -60px;
+    font-size: 25px;
+}
+.arrow{
+    margin-top:100px;
+}
+}
+@media(max-width:400px){
+  .container{
+        width:230px;
+        height:230px;
+    }  
+    .container div {
+    width: 100px;
+    margin-left: -50px;
+    font-size: 20px;
+    padding-top: 40px;
+}
+}
