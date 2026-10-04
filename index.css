@@ -13,7 +13,7 @@ body{
     justify-content:center;
     flex-direction:column;
     min-height:100vh;
-    overflow:hidden;
+    overflow-x:hidden;
 }
 .container{
     width:500px;
@@ -33,7 +33,6 @@ body{
     left: 50%;
     margin-left: -100px;
     transform-origin: bottom center;
-    clip-path: polygon(100% 0, 50% 100%, 0 0);
 
     display: flex;
     align-items: flex-start;
@@ -45,43 +44,29 @@ body{
     font-size: 30px;
     font-weight: bold;
 }
-.container .one {
-    background-color: blue;
-}
+.container .slice {
+    position: absolute;
+    width: 200px;
+    height: 50%;
 
-.container .two {
-    background-color: rgb(251, 255, 0);
-    transform: rotate(45deg);
-}
+    top: 0;
+    left: 50%;
 
-.container .three {
-    background-color: rgb(245, 118, 0);
-    transform: rotate(90deg);
-}
+    margin-left: -100px;
 
-.container .four {
-    background-color: rgb(245, 0, 184);
-    transform: rotate(135deg);
-}
+    transform-origin: bottom center;
 
-.container .five {
-    background-color: rgb(105, 248, 236);
-    transform: rotate(180deg);
-}
+    clip-path: polygon(100% 0, 50% 100%, 0 0);
 
-.container .six {
-    background-color: rgb(60, 255, 0);
-    transform: rotate(225deg);
-}
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 
-.container .seven {
-    background-color: rgb(255, 0, 0);
-    transform: rotate(270deg);
-}
+    padding-top: 70px;
 
-.container .eight {
-    background-color: rgb(80, 73, 73);
-    transform: rotate(315deg);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
 }
 .arrow {
     z-index: 2000;
@@ -108,6 +93,45 @@ body{
     outline:none;
     margin-top:10px;
 }
+.wheel-number {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+
+    z-index: 10;
+}
+.controls{
+    width:50vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    margin-top: 30px;
+    margin-bottom:30px;
+}
+.controls input {
+    width:100%;
+    border:none;
+    padding: 10px;
+    color:black;
+    font-size:23px;
+    border-radius: 20px;
+}
+.controls button{
+    border:none;
+    color:black;
+    padding:15px;
+    border-radius:15px;
+    transition:.5s;
+}
+button:hover{
+    transform: scale(1.1);
+}
 @media(max-width:500px){
     .container{
         width:300px;
@@ -123,6 +147,8 @@ body{
     height: 50%;
     margin-left: -60px;
     font-size: 25px;
+}
+.controls{
 }
 .arrow {
     top: calc(50% - 170px);
