@@ -11,6 +11,7 @@ body{
     display: flex;
     align-items:center;
     justify-content:center;
+    flex-direction:column;
     min-height:100vh;
     overflow:hidden;
 }
@@ -83,10 +84,6 @@ body{
     transform: rotate(315deg);
 }
 .arrow {
-    position: absolute;
-    top: calc(50% - 270px);
-    left: 50%;
-    transform: translateX(-50%);
     z-index: 2000;
 
     width: 0;
@@ -98,21 +95,18 @@ body{
 }
 
 #spin{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
     z-index:1000;
     background-color:white;
     border:2px solid gray;
     text-align:center;
-    width:70px;
+    width:110px;
     height:70px;
-    border-radius:50%;
+    border-radius:10%;
     font-weight:bold;
     font-size:20px;
     cursor:pointer;
     outline:none;
+    margin-top:10px;
 }
 @media(max-width:500px){
     .container{
