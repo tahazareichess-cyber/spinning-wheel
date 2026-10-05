@@ -4,7 +4,7 @@
 body{
     margin:0;
     padding:0;
-    background-image:url("luck.jpg");
+    background-image:url("/img/vecteezy_blue-purple-gradient-grainy-gradient-background-blue-purple_71411527.jpg");
     background-position: center;
     background-repeat:no-repeat;
     background-size:cover;
@@ -24,6 +24,9 @@ body{
     position:relative;
     border-radius:50%;
     transition: transform 5s ease-out;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 .container div {
     width: 200px;
@@ -132,6 +135,18 @@ body{
 button:hover{
     transform: scale(1.1);
 }
+.container img {
+    display:none;
+    position: absolute;
+    top: 50%;
+    left: 46.5%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 4000;
+}
 @media(max-width:500px){
     .container{
         width:300px;
@@ -148,7 +163,8 @@ button:hover{
     margin-left: -60px;
     font-size: 25px;
 }
-.controls{
+.controls input{
+    width:80px;
 }
 .arrow {
     top: calc(50% - 170px);
